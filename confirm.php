@@ -7,6 +7,7 @@
     </head>
 
 <body>
+
     <h1>入力内容の確認</h1>
 
     <?php
@@ -18,11 +19,11 @@
      $user_name=$_POST["user_name"];
      $age=$_POST["age"];
      $phone_number=$_POST["phone_number"];
-     $email_address=$_POST["email_adderess"];
+     $email_address=$_POST["email_address"];
      $address=$_POST["address"];
      $question=$_POST["question"];
      $gender=$_POST["gender"];
-     }
+     
 
     if ($user_name === "") {
         $errors[] = "名前を入力してください。";
@@ -32,13 +33,13 @@
     
     if ($age === "") {
         $errors[] = "年齢を入力してください。";
-    } elseif($age < 0 || $age > 150){
+    } elseif($age < 0 || $age > 150) {
         $errors[] ="年齢は0から150の間で入力してください。";
     }
     
     if ($phone_number === "") {
-        $errors[] = "電話番号を入力してください";
-    } elseif(!preg_match("/^[a-zA-Z0-9-]+$/",$phone_number)){
+        $errors[] = "電話番号を入力してください。";
+    } elseif(!preg_match("/^[0-9-]+$/",$phone_number)) {
         $errors[] ="電話番号は半角英数字とハイフンのみ使用できます。";
     }
     
@@ -57,10 +58,10 @@
 
     if (!empty($errors)) {
 
-    echo "<h2>入力内容にエラーがあります。</h2>";
+      echo "<h2>入力内容にエラーがあります。</h2>";
 
-    foreach ($errors as $error) {
-        echo "<p>" . htmlspecialchars($error, ENT_QUOTES, "UTF-8") . "</p>";
+      foreach ($errors as $error) {
+      echo "<p>" . htmlspecialchars($error, ENT_QUOTES, "UTF-8") . "</p>";
     }
 
     } else {
@@ -77,7 +78,11 @@
 
         exit;
     }
+    }
+    
 
     ?>
 
 </body>
+
+</html>

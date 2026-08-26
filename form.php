@@ -1,7 +1,7 @@
 <!DOCTYPE html>
  <html lang="ja">
   <head>
-   <meta charaset="UTF-8">
+   <meta charset="UTF-8">
    <meta name="">
    <title>フォーム入力</title>
 
@@ -36,7 +36,7 @@
 
   <div class="form-item">
     <label for="email_address">メールアドレス:</label>
-    <input type="text" class="form" id="email_adderess" name="email_adderess">
+    <input type="text" class="form" id="email_address" name="email_address">
   </div>
 
   <br><br>
@@ -71,3 +71,5 @@
 </form>
 
 </body>
+
+</html>
